@@ -10,4 +10,4 @@ GitHub Pages publishes `main` from the repository root. The custom domain is `it
 
 Edit `index.html` and push to `main`. CSS, artwork, and the favicon are inline; no dependency install or build is required.
 
-Contact links point to `wluk@ithy.com`. The public business link points to `https://ithy.com/`.
+Contact links point to `wluk@ithy.ai`. The public business link points to `https://ithy.com/`.
