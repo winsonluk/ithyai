@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <title>Ithy.ai</title>
-  <path fill-rule="evenodd" d="M6 8h8v8H6ZM6 24h8v32H6ZM41 22c-10.5 0-18 7.8-18 17S30.5 56 41 56c4 0 7.6-1.4 10-4v4h8V22h-8v4c-2.4-2.6-6-4-10-4Zm0 8a9 9 0 1 1 0 18 9 9 0 1 1 0-18Z" fill="#101112"/>
+  <defs><mask id="ithy-separation"><rect width="64" height="64" fill="white"/><circle cx="19" cy="32" r="22" fill="black"/></mask></defs>
+  <circle cx="44" cy="32" r="17" fill="#101112" mask="url(#ithy-separation)"/>
+  <circle cx="19" cy="32" r="17" fill="#101112"/>
 </svg>
