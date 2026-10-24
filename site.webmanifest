@@ -1,0 +1,13 @@
+{
+  "name": "Ithy.ai",
+  "short_name": "Ithy.ai",
+  "id": "/",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f4f3ed",
+  "theme_color": "#202924",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

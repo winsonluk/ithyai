@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f3ed"/>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".8" fill="#d4dbcd"/>
+    </pattern>
+  </defs>
+  <path d="M72 110h1056M72 528h1056" stroke="#d0d7cb"/>
+  <g transform="translate(66 40) scale(.7)">
+    <path d="M24.5 11.4a22 22 0 0 0 0 41.2l4.1-11.3a10 10 0 0 1 0-18.6Zm15 0a22 22 0 0 1 0 41.2l-4.1-11.3a10 10 0 0 0 0-18.6Z" fill="#347c70"/>
+    <circle cx="32" cy="32" r="6.5" fill="#bb8b13"/>
+  </g>
+  <text x="125" y="76" font-family="Helvetica, Arial, sans-serif" font-size="34" letter-spacing="-1.8" fill="#202924">ithy<tspan fill="#626a63">.ai</tspan></text>
+  <text x="1127" y="72" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#626a63">NEW YORK</text>
+  <rect x="793" y="165" width="335" height="308" fill="url(#dots)"/>
+  <g transform="translate(808 170) scale(4.7)">
+    <path d="M24.5 11.4a22 22 0 0 0 0 41.2l4.1-11.3a10 10 0 0 1 0-18.6Zm15 0a22 22 0 0 1 0 41.2l-4.1-11.3a10 10 0 0 0 0-18.6Z" fill="#347c70"/>
+    <circle cx="32" cy="32" r="6.5" fill="#bb8b13"/>
+  </g>
+  <text x="72" y="185" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#347c70">AN AI-NATIVE COMPANY</text>
+  <text x="66" y="308" font-family="Helvetica, Arial, sans-serif" font-size="94" letter-spacing="-6" fill="#202924">Intelligence,</text>
+  <text x="69" y="412" font-family="Helvetica, Arial, sans-serif" font-size="94" letter-spacing="-6" fill="#202924">put to <tspan font-family="Georgia, serif" font-style="italic">work.</tspan></text>
+  <text x="72" y="573" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#626a63">Distinct businesses. Shared intelligence.</text>
+  <text x="1128" y="573" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#347c70">ithy.ai</text>
+</svg>
