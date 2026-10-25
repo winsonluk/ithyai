@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f4f2">
   <title>Ithy.ai — Intelligence, put to work.</title>
-  <meta name="description" content="Ithy is building a family of focused businesses with AI at their core. Distinct brands. A shared operating foundation. Useful products for real problems.">
+  <meta name="description" content="An AI-native company building focused businesses for real problems. Backed by LAUNCH, the venture firm founded by Jason Calacanis.">
   <link rel="canonical" href="https://ithy.ai/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ithy.ai/">
   <meta property="og:site_name" content="Ithy.ai">
   <meta property="og:title" content="Ithy.ai — Intelligence, put to work.">
-  <meta property="og:description" content="A different way to build and operate businesses. AI at the core. Real outcomes at the center.">
-  <meta property="og:image" content="https://ithy.ai/social-card.png?v=20261024d">
+  <meta property="og:description" content="Distinct businesses. Shared intelligence. Backed by LAUNCH, founded by Jason Calacanis.">
+  <meta property="og:image" content="https://ithy.ai/social-card.png?v=20261025">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Ithy.ai. Intelligence, put to work. Distinct businesses. Shared intelligence.">
+  <meta property="og:image:alt" content="Ithy.ai. Intelligence, put to work. Backed by LAUNCH. Distinct businesses. Shared intelligence.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ithy.ai — Intelligence, put to work.">
-  <meta name="twitter:description" content="A family of focused businesses. A shared AI operating foundation.">
-  <meta name="twitter:image" content="https://ithy.ai/social-card.png?v=20261024d">
-  <meta name="twitter:image:alt" content="Ithy.ai. Intelligence, put to work.">
+  <meta name="twitter:description" content="Distinct businesses. Shared intelligence. Backed by LAUNCH, founded by Jason Calacanis.">
+  <meta name="twitter:image" content="https://ithy.ai/social-card.png?v=20261025">
+  <meta name="twitter:image:alt" content="Ithy.ai. Intelligence, put to work. Backed by LAUNCH.">
   <meta name="application-name" content="Ithy.ai">
   <link rel="icon" href="favicon.ico?v=20261024d" sizes="16x16 32x32 48x48">
   <link rel="icon" href="favicon-32x32.png?v=20261024d" type="image/png" sizes="32x32">
@@ -62,6 +62,14 @@
     .mobile-label { display: none; }
     .nav a:hover { color: var(--accent); }
     .nav-contact { display: inline-flex; align-items: center; gap: 16px; }
+    .backing { display: flex; align-items: center; gap: 32px; min-height: 76px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+    .backing-identity { display: flex; align-items: center; gap: 20px; flex: 0 0 auto; }
+    .backing-label { color: var(--muted); font: 9px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .1em; }
+    .backing-firm { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: 19px; font-weight: 650; letter-spacing: -.04em; }
+    .backing-firm .arrow { width: 14px; height: 14px; }
+    .backing p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .backing p a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+    .backing p a:hover { text-decoration-color: var(--ink); }
     .arrow { width: 18px; height: 18px; flex: 0 0 auto; transition: transform .22s; }
     a:hover .arrow { transform: translate(2px, -2px); }
     .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0; font: 10px/1.5 var(--mono); text-transform: uppercase; letter-spacing: .12em; }
@@ -169,6 +177,7 @@
     @media (max-width: 760px) {
       .wrap { width: calc(100% - 44px); }
       .site-header { height: 85px; }
+      .backing { align-items: flex-start; flex-direction: column; gap: 0; padding-block: 10px 15px; }
       .wordmark { font-size: 26px; }
       .brand-symbol { width: 33px; height: 33px; }
       .brand { gap: 9px; }
@@ -273,6 +282,14 @@
       <a class="nav-contact" href="#contact"><span class="desktop-label">Get in touch</span><span class="mobile-label">Contact</span> <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
     </nav>
   </header>
+
+  <aside class="backing wrap" aria-label="Investor backing">
+    <div class="backing-identity">
+      <span class="backing-label">Backed by</span>
+      <a class="backing-firm" href="https://launch.co/" target="_blank" rel="noopener noreferrer">LAUNCH <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+    </div>
+    <p>Founded by <a href="https://allin.com/about/jason-calacanis" target="_blank" rel="noopener noreferrer">Jason Calacanis</a>, co-host of All-In.</p>
+  </aside>
 
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">

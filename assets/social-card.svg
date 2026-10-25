@@ -7,7 +7,7 @@
     <circle cx="19" cy="32" r="17" fill="#f4f4f2"/>
   </g>
   <text x="125" y="76" font-family="Helvetica, Arial, sans-serif" font-size="34" letter-spacing="-1.8" fill="#f4f4f2">ithy<tspan fill="#a3aaa5">.ai</tspan></text>
-  <text x="1127" y="72" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#a3aaa5">NEW YORK</text>
+  <text x="1127" y="72" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#a3aaa5">BACKED BY LAUNCH</text>
   <g transform="translate(804 168) scale(4.7)" fill="#f4f4f2">
     <defs><mask id="social-large-separation"><rect width="64" height="64" fill="white"/><circle cx="19" cy="32" r="22" fill="black"/></mask></defs>
     <circle cx="44" cy="32" r="17" fill="#f4f4f2" mask="url(#social-large-separation)"/>
