@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g transform="translate(6.4 6.4) scale(.8)">
   <defs><mask id="ithy-separation"><rect width="64" height="64" fill="white"/><circle cx="19" cy="32" r="22" fill="black"/></mask></defs>
   <circle cx="44" cy="32" r="17" fill="#000000" mask="url(#ithy-separation)"/>
   <circle cx="19" cy="32" r="17" fill="#000000"/>
+  </g>
 </svg>
