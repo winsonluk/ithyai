@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f4f2">
   <title>Ithy.ai — We build businesses for AI to run.</title>
-  <meta name="description" content="Ithy uses AI to find businesses worth building, then build, grow and operate them. Backed by Jason Calacanis’s LAUNCH.">
+  <meta name="description" content="Ithy researches, builds and owns businesses largely operated by AI. Backed by Jason Calacanis’s LAUNCH.">
   <link rel="canonical" href="https://ithy.ai/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ithy.ai/">
   <meta property="og:site_name" content="Ithy.ai">
   <meta property="og:title" content="Ithy.ai — We build businesses for AI to run.">
-  <meta property="og:description" content="The hardest part is deciding what should exist. We put AI to work on that question, then on the product, the customers, and the business behind it.">
+  <meta property="og:description" content="Ithy researches, builds and owns businesses largely operated by AI. Commercial judgment, product development and operations, within one company.">
   <meta property="og:image" content="https://ithy.ai/social-card.png?v=20261030b">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ithy.ai. We build businesses for AI to run. Backed by LAUNCH.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ithy.ai — We build businesses for AI to run.">
-  <meta name="twitter:description" content="The hardest part is deciding what should exist. We put AI to work on that question, then on the product, the customers, and the business behind it.">
+  <meta name="twitter:description" content="Ithy researches, builds and owns businesses largely operated by AI. Commercial judgment, product development and operations, within one company.">
   <meta name="twitter:image" content="https://ithy.ai/social-card.png?v=20261030b">
   <meta name="twitter:image:alt" content="Ithy.ai. We build businesses for AI to run. Backed by LAUNCH.">
   <meta name="application-name" content="Ithy.ai">
@@ -29,306 +29,216 @@
   <link rel="mask-icon" href="assets/pinned-tab.svg?v=20261026" color="#303438">
   <link rel="manifest" href="site.webmanifest?v=20261026">
   <style>
-    :root {
-      color-scheme: light;
-      --paper: #f4f4f2;
-      --ink: #101112;
-      --muted: #626466;
-      --line: #d9dbda;
-      --accent: #303438;
-      --highlight: #eceeec;
-      --serif: Georgia, 'Times New Roman', serif;
-      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-    }
+    :root { color-scheme: light; --paper: #f4f4f2; --ink: #101112; --muted: #626466; --line: #d9dbda; --serif: Georgia, 'Times New Roman', serif; --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 30px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 32px; }
     body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
-    ::selection { color: var(--ink); background: var(--highlight); }
+    ::selection { background: #d8dcd7; color: var(--ink); }
     a { color: inherit; text-decoration: none; }
-    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
     svg { display: block; }
     button { font: inherit; }
     .wrap { width: min(1280px, calc(100% - 112px)); margin-inline: auto; }
     .skip { position: fixed; top: 10px; left: 10px; z-index: 20; padding: 12px 20px; background: var(--ink); color: var(--paper); transform: translateY(-150%); }
     .skip:focus { transform: translateY(0); }
-    .site-header { height: 114px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .site-header { min-height: 100px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
     .brand { display: inline-flex; align-items: center; gap: 12px; }
     .brand-symbol { width: 37px; height: 37px; flex: 0 0 auto; }
     .wordmark { font-size: 29px; line-height: 1; font-weight: 650; letter-spacing: -1.6px; }
     .wordmark span { color: var(--muted); font-weight: 400; }
-    .nav { display: flex; align-items: center; gap: 35px; font-size: 13px; font-weight: 500; }
-    .nav a { display: inline-flex; align-items: center; min-height: 44px; transition: color .18s; }
-    .mobile-label { display: none; }
-    .nav a:hover { color: var(--accent); }
-    .nav-contact { display: inline-flex; align-items: center; gap: 16px; }
-    .backing { display: flex; align-items: center; gap: 32px; min-height: 76px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; gap: 35px; font-size: 13px; }
+    .nav a { display: inline-flex; align-items: center; min-height: 44px; gap: 12px; }
+    .nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
+    .arrow { width: 18px; height: 18px; flex: 0 0 auto; transition: transform .2s; }
+    a:hover .arrow { transform: translate(2px, -2px); }
+    .backing { display: flex; align-items: center; gap: 30px; min-height: 66px; border-bottom: 1px solid var(--line); }
     .backing-identity { display: flex; align-items: center; gap: 20px; flex: 0 0 auto; }
     .backing-label { color: var(--muted); font: 9px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .1em; }
     .backing-firm { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: 19px; font-weight: 650; letter-spacing: -.04em; }
     .backing-firm .arrow { width: 14px; height: 14px; }
     .backing p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
-    .backing p a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
-    .backing p a:hover { text-decoration-color: var(--ink); }
-    .arrow { width: 18px; height: 18px; flex: 0 0 auto; transition: transform .22s; }
-    a:hover .arrow { transform: translate(2px, -2px); }
-    .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0; font: 10px/1.5 var(--mono); text-transform: uppercase; letter-spacing: .12em; }
-    .eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: 0 0 auto; }
-    .hero { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; min-height: 740px; padding-block: 76px 60px; }
-    .hero-copy { position: relative; z-index: 1; padding-bottom: 12px; }
-    .hero .eyebrow { color: var(--accent); }
-    h1 { margin: 32px 0 27px; font-size: clamp(68px, 6.7vw, 100px); line-height: .99; font-weight: 440; letter-spacing: -.074em; }
+    .backing p a { color: var(--ink); text-decoration: underline; text-decoration-color: #c4c8c3; text-underline-offset: 4px; }
+    .eyebrow { margin: 0; font: 10px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .11em; }
+    .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 70px; align-items: end; padding-block: 78px 83px; }
+    .hero .eyebrow { color: var(--muted); margin-bottom: 30px; }
+    h1 { margin: 0; font-size: clamp(76px, 7.6vw, 108px); line-height: .99; font-weight: 440; letter-spacing: -.071em; }
     h1 span { display: block; }
-    h1 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.065em; }
-    .hero-description { max-width: 420px; font-size: 17px; line-height: 1.75; color: var(--muted); margin: 0; }
-    .hero-actions { display: flex; align-items: center; gap: 26px; margin-top: 33px; }
-    .button { min-height: 49px; display: inline-flex; justify-content: center; align-items: center; gap: 22px; padding: 14px 20px; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 550; transition: background .2s, border-color .2s; }
-    .button:hover { background: var(--accent); border-color: var(--accent); }
+    h1 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.067em; }
+    .hero-description { padding-bottom: 2px; }
+    .hero-description p { margin: 0 0 23px; max-width: 440px; font-size: 18px; line-height: 1.75; color: #505456; }
+    .hero-description p:first-child { color: var(--ink); font-size: 22px; line-height: 1.5; letter-spacing: -.025em; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 36px; }
+    .button { min-height: 49px; display: inline-flex; align-items: center; justify-content: center; gap: 24px; padding: 14px 20px; background: var(--ink); color: var(--paper); border: 1px solid var(--ink); font-size: 13px; font-weight: 550; }
+    .button:hover { background: #303438; }
     .text-link { display: inline-flex; align-items: center; min-height: 44px; gap: 12px; font-size: 13px; }
-    .text-link span { border-bottom: 1px solid var(--line); padding-bottom: 3px; }
-    .text-link:hover span { border-color: var(--ink); }
-    .system { margin: 0; position: relative; }
-    .discovery-map { border: 1px solid #cbd0cb; padding: 26px; background: radial-gradient(#d0d4d0 .7px, transparent .7px) 0 0 / 17px 17px; }
-    .research-inputs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; text-align: center; }
-    .research-inputs span { display: grid; place-items: center; min-height: 48px; padding: 8px; border: 1px solid #cbd0cb; background: var(--paper); font-size: 12px; line-height: 1.4; }
-    .research-links { width: 100%; height: 42px; color: #929a94; }
-    .research-core { position: relative; padding: 25px; color: var(--paper); background: var(--ink); }
-    .research-core .eyebrow { font-size: 9px; color: #c2c8c3; letter-spacing: .1em; }
-    .research-core-title { display: flex; align-items: center; gap: 15px; font-size: clamp(20px, 2vw, 27px); line-height: 1.25; letter-spacing: -.035em; margin: 18px 0 24px; font-weight: 480; }
-    .research-mark { width: 39px; height: 39px; flex: 0 0 auto; filter: invert(1); }
-    .research-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid #4b524d; padding: 0; margin: 0; list-style: none; }
-    .research-checks li { padding: 10px 12px; color: #d0d5d0; font-size: 12px; line-height: 1.6; }
-    .research-checks li:nth-child(odd) { border-right: 1px solid #4b524d; }
-    .research-checks li:nth-child(-n+4) { border-bottom: 1px solid #4b524d; }
-    .research-route { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
-    .research-route span { display: grid; place-items: center; min-height: 47px; padding: 8px 5px; border: 1px solid #aeb7af; background: var(--paper); font-size: 12px; line-height: 1.4; text-align: center; }
-    .learning-loop { display: flex; align-items: center; gap: 11px; margin: 23px 0 0; border-top: 1px dashed #adb5ae; padding-top: 17px; font-size: 12px; line-height: 1.6; color: #4e5850; }
-    .learning-loop svg { flex: 0 0 auto; width: 22px; height: 22px; }
-    .system figcaption { margin-top: 14px; font: 10px/1.7 var(--mono); color: var(--muted); }
-    .thesis { display: grid; grid-template-columns: 1fr 2.15fr; gap: 60px; border-top: 1px solid var(--line); padding-block: 60px 83px; }
-    .section-index { display: flex; gap: 18px; font: 10px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .09em; color: var(--muted); padding-top: 8px; }
-    .section-index .number { color: var(--accent); }
-    .thesis h2 { font-size: clamp(30px, 3.2vw, 45px); font-weight: 450; line-height: 1.2; letter-spacing: -.04em; margin: 0 0 26px; max-width: 750px; text-wrap: balance; }
-    .thesis .lead { max-width: 670px; color: var(--muted); font-size: 17px; line-height: 1.8; margin: 0; }
-    .investigation { margin: 39px 0 0; padding: 0; list-style: none; counter-reset: investigation; }
-    .investigation li { display: grid; grid-template-columns: 30px 1fr; gap: 17px; padding: 25px 0; border-top: 1px solid var(--line); counter-increment: investigation; }
-    .investigation li::before { content: "0" counter(investigation); color: var(--muted); font: 10px/1.8 var(--mono); padding-top: 3px; }
-    .investigation h3 { margin: 0 0 10px; font-size: 19px; font-weight: 530; letter-spacing: -.025em; }
-    .investigation p { max-width: 630px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
-    .scale-section { padding-block: 78px 62px; background: var(--ink); color: var(--paper); }
-    .scale-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 85px; align-items: center; }
-    .scale-copy .eyebrow { color: #adb8ae; margin-bottom: 31px; }
-    .scale-copy h2 { margin: 0 0 30px; font-size: clamp(40px, 4.2vw, 61px); line-height: 1.1; font-weight: 430; letter-spacing: -.055em; }
-    .scale-copy h2 em { font-family: var(--serif); font-weight: 400; }
-    .scale-copy > p:not(.eyebrow) { max-width: 535px; margin: 0 0 20px; font-size: 16px; line-height: 1.85; color: #c0c8c1; }
-    .scale-visual { margin: 0; }
-    .scale-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: end; }
-    .scale-path-label { min-height: 34px; margin: 0 0 18px; color: #adb8ae; font: 10px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .07em; }
-    .scale-destination { display: flex; flex-direction: column; justify-content: center; min-height: 112px; border: 1px solid #6c786e; padding: 17px 18px; font-size: 18px; line-height: 1.4; letter-spacing: -.025em; }
-    .scale-destination.future { border-style: dashed; color: #d9dfda; }
-    .scale-destination small { display: block; color: #adb8ae; font: 9px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .06em; margin-top: 10px; }
-    .scale-arrow { width: 22px; height: 48px; margin-inline: auto; color: #adb8ae; }
-    .scale-business { border: 1px solid var(--paper); padding: 18px; background: var(--paper); color: var(--ink); font-size: 23px; letter-spacing: -.045em; line-height: 1.2; }
-    .scale-business span { display: block; margin-top: 9px; font: 9px/1.6 var(--mono); color: #536055; text-transform: uppercase; letter-spacing: .06em; }
-    .scale-business.next { background: transparent; color: var(--paper); border-color: #667369; }
-    .scale-business.next span { color: #adb8ae; }
-    .scale-base { position: relative; display: flex; align-items: center; gap: 18px; margin-top: 28px; padding: 21px; border: 1px solid #667369; }
-    .scale-base::before, .scale-base::after { content: ''; position: absolute; width: 1px; height: 29px; top: -29px; background: #667369; }
-    .scale-base::before { left: 24%; }
-    .scale-base::after { left: 76%; }
-    .scale-base img { width: 36px; height: 36px; filter: invert(1); flex: 0 0 auto; }
-    .scale-base strong { display: block; font-size: 18px; font-weight: 480; letter-spacing: -.025em; }
-    .scale-base p { margin: 8px 0 0; font-size: 12px; line-height: 1.7; color: #b4bfb6; }
-    .scale-visual figcaption { color: #adb8ae; font-size: 11px; line-height: 1.8; margin-top: 17px; }
-    .scale-mechanisms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 42px; margin-top: 47px; padding-top: 31px; border-top: 1px solid #424b44; }
-    .scale-mechanisms h3 { margin: 0 0 13px; font-size: 17px; font-weight: 480; letter-spacing: -.02em; }
-    .scale-mechanisms p { color: #b4bfb6; font-size: 13px; line-height: 1.85; margin: 0; }
-    .perspective { display: grid; grid-template-columns: 1fr 2.15fr; column-gap: 60px; padding-block: 57px 59px; margin-block: 0; border-bottom: 1px solid var(--line); }
-    .perspective .quote-context { max-width: 240px; color: var(--muted); font-size: 13px; line-height: 1.8; margin: 6px 0 0; }
-    .perspective blockquote { margin: 0; }
-    .perspective blockquote p { font: clamp(28px, 2.8vw, 39px)/1.35 var(--serif); letter-spacing: -.025em; margin: 0 0 22px; }
-    .perspective figcaption { grid-column: 2; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; line-height: 1.8; }
-    .perspective figcaption span { display: block; color: var(--muted); }
-    .source-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; padding-block: 8px; font-size: 11px; text-decoration: underline; text-underline-offset: 4px; }
-    .source-link .arrow { width: 13px; height: 13px; }
-    .companies { padding-block: 78px 86px; }
-    .companies-heading { display: grid; grid-template-columns: 1fr 2.15fr; gap: 60px; margin-bottom: 33px; }
-    .companies h2 { font-size: clamp(32px, 3.5vw, 46px); font-weight: 450; line-height: 1.2; letter-spacing: -.045em; margin: 0; }
-    .company-feature { position: relative; padding: 40px 44px 29px; border: 1px solid #cbd0cb; background: #e9ece7; }
-    .company-feature::after { content: ''; position: absolute; top: -1px; left: -1px; width: 45px; height: 3px; background: var(--ink); }
-    .company-feature-header { display: flex; align-items: center; gap: 18px; }
-    .company-mark { width: 58px; height: 58px; padding: 8px; display: grid; place-items: center; flex: 0 0 auto; }
-    .company-name { display: inline-flex; align-items: baseline; min-height: 44px; font-size: 43px; font-weight: 500; letter-spacing: -.065em; margin: 0; }
-    .company-name span { font-weight: 400; color: var(--muted); }
-    .company-mark img { display: block; width: 100%; height: auto; }
-    .company-status { display: inline-flex; align-items: center; gap: 9px; margin-left: auto; color: var(--muted); font: 10px/1.6 var(--mono); letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
-    .company-status::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--ink); }
-    .company-summary { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-top: 24px; }
-    .company-summary p { margin: 0; max-width: 630px; font-size: clamp(20px, 2.2vw, 29px); line-height: 1.4; letter-spacing: -.03em; }
-    .company-summary .text-link { flex: 0 0 auto; }
-    .company-metrics { display: grid; grid-template-columns: 1fr 1fr; margin: 37px 0 0; border-top: 1px solid #cbd0cb; }
-    .company-metric { display: flex; flex-direction: column; align-items: flex-start; padding: 31px 0 0; }
-    .company-metric + .company-metric { border-left: 1px solid #cbd0cb; padding-left: 44px; }
-    .company-metric dd { order: -1; margin: 0 0 15px; font-size: clamp(66px, 8vw, 108px); line-height: 1; font-weight: 440; letter-spacing: -.075em; font-variant-numeric: lining-nums tabular-nums; }
-    .company-metric dt { font-size: 14px; letter-spacing: -.015em; line-height: 1.6; }
-    .company-metric dt small { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; letter-spacing: 0; }
-    .metrics-note { max-width: 920px; margin: 25px 0 0; border-top: 1px solid #cbd0cb; padding-top: 17px; color: var(--muted); font-size: 11px; line-height: 1.8; }
-    .operating-intro { max-width: 800px; margin: 31px 0 0; font-size: 20px; line-height: 1.65; letter-spacing: -.02em; }
-    .operating-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 55px; margin-top: 31px; }
-    .operating-group { border-top: 1px solid var(--line); padding-top: 22px; }
-    .operating-group h3 { margin: 0 0 17px; font-size: 13px; font-weight: 550; }
-    .operating-group p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
-    .private-work { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 25px; margin-top: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .text-link span { border-bottom: 1px solid #b4bab4; padding-bottom: 3px; }
+    .text-link:hover span { border-color: currentColor; }
+    .company-section { padding-bottom: 90px; }
+    .company-feature { padding: 43px 48px 30px; background: var(--ink); color: var(--paper); }
+    .company-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 30px; border-bottom: 1px solid #3c4140; }
+    .company-heading .eyebrow { color: #b3bab4; }
+    .company-heading .text-link { color: #e0e5df; }
+    .company-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; padding-block: 35px 34px; }
+    .product-name { display: flex; align-items: center; gap: 17px; }
+    .product-mark { width: 40px; height: 40px; flex: 0 0 auto; filter: invert(1); }
+    .product-name h2 { margin: 0; font-size: 57px; font-weight: 480; line-height: 1; letter-spacing: -.065em; }
+    .product-name h2 span { color: #aeb6b0; font-weight: 400; }
+    .product-description { max-width: 380px; margin: 21px 0 0; font-size: 20px; line-height: 1.55; letter-spacing: -.02em; color: #d2d9d2; }
+    .company-origin { margin: 0; align-self: center; font-size: 16px; line-height: 1.85; color: #b8c1b9; }
+    .company-metrics { display: grid; grid-template-columns: 1fr 1fr; margin: 0; border-top: 1px solid #3c4140; }
+    .company-metric { display: flex; flex-direction: column; align-items: flex-start; padding: 36px 0 26px; }
+    .company-metric + .company-metric { border-left: 1px solid #3c4140; padding-left: 48px; }
+    .company-metric dd { order: -1; margin: 0 0 17px; font-size: clamp(76px, 8.4vw, 114px); font-weight: 440; line-height: 1; letter-spacing: -.075em; font-variant-numeric: lining-nums tabular-nums; }
+    .company-metric dt { font-size: 14px; line-height: 1.6; }
+    .company-metric dt small { display: block; margin-top: 6px; color: #a9b4ac; font-size: 11px; }
+    .metrics-note { margin: 0; padding-top: 17px; border-top: 1px solid #3c4140; color: #a9b4ac; font-size: 11px; line-height: 1.8; }
+    .private-work { display: flex; align-items: baseline; justify-content: space-between; gap: 25px; padding-top: 21px; color: var(--muted); font-size: 12px; line-height: 1.7; }
     .private-work p { margin: 0; }
-    .private-label { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; font: 9px/1.6 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-    .private-label::before { content: ''; display: block; width: 5px; height: 5px; background: var(--accent); }
-    .contact { background: #e7e9e6; padding: 66px 0 70px; }
-    .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 70px; align-items: end; }
-    .contact .eyebrow { margin-bottom: 31px; }
-    .contact h2 { margin: 0; font-size: clamp(44px, 5vw, 69px); font-weight: 440; line-height: 1.08; letter-spacing: -.06em; }
-    .contact h2 em { font-family: var(--serif); font-weight: 400; }
-    .contact-copy p { max-width: 385px; font-size: 16px; line-height: 1.8; color: #4d5350; margin: 0 0 25px; }
-    .contact-copy .button { gap: 48px; }
-    .contact-email { display: block; width: fit-content; margin-top: 20px; color: #4d5350; font: 12px/1.7 var(--mono); border-bottom: 1px solid #b9bfbb; }
-    .contact-email:hover { color: var(--ink); border-color: var(--ink); }
-    .contact-tools { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 16px; }
-    .contact-tools .contact-email { display: inline-flex; align-items: center; margin-top: 0; min-height: 44px; border-bottom: none; text-decoration: underline; text-underline-offset: 5px; }
+    .private-work .eyebrow { font-size: 9px; white-space: nowrap; }
+    .research { border-top: 1px solid var(--line); padding-block: 43px 84px; }
+    .section-top { display: flex; align-items: center; gap: 22px; margin-bottom: 36px; color: var(--muted); }
+    .section-top::before { content: ''; width: 30px; height: 1px; background: currentColor; }
+    .research-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 104px; align-items: start; }
+    h2.editorial-title { font-size: clamp(38px, 4vw, 55px); line-height: 1.12; font-weight: 440; letter-spacing: -.055em; margin: 0 0 30px; }
+    .editorial-title em { font-family: var(--serif); font-weight: 400; }
+    .prose p { margin: 0 0 22px; font-size: 16px; line-height: 1.9; color: #52575a; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose .lead { color: var(--ink); font-size: 20px; line-height: 1.65; letter-spacing: -.025em; }
+    .research-record { padding: 26px 0 0 35px; border-left: 1px solid var(--line); margin-top: 6px; }
+    .research-number { margin: 0 0 22px; font-size: clamp(82px, 8.6vw, 120px); line-height: 1; font-weight: 440; letter-spacing: -.08em; font-variant-numeric: lining-nums tabular-nums; }
+    .research-record .record-label { max-width: 270px; margin: 0 0 23px; font-size: 20px; line-height: 1.45; letter-spacing: -.025em; }
+    .research-record .record-note { max-width: 255px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
+    .research-record time { display: block; font: 10px/1.8 var(--mono); margin-top: 18px; color: var(--muted); }
+    .ambition { background: #e8ebe6; padding-block: 65px 72px; }
+    .ambition-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 104px; }
+    .ambition h2 { max-width: 500px; font-size: clamp(40px, 4.5vw, 61px); }
+    .ambition .prose { padding-top: 3px; }
+    .ambition .prose p { color: #3c3f42; font-size: 17px; }
+    .ambition .prose .lead { color: var(--ink); font-size: 24px; line-height: 1.6; }
+    .perspective { display: grid; grid-template-columns: 1fr 2.1fr; gap: 25px 64px; padding-block: 66px; margin-block: 0; border-bottom: 1px solid var(--line); }
+    .quote-context { margin: 3px 0 0; max-width: 250px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .perspective blockquote { margin: 0; }
+    .perspective blockquote p { margin: 0; font: clamp(28px, 2.8vw, 39px)/1.4 var(--serif); letter-spacing: -.03em; }
+    .perspective figcaption { grid-column: 2; display: flex; justify-content: space-between; gap: 25px; align-items: center; font-size: 12px; line-height: 1.8; }
+    .perspective figcaption span { display: block; color: var(--muted); }
+    .source-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 11px; text-decoration: underline; text-underline-offset: 5px; }
+    .source-link .arrow { width: 13px; height: 13px; }
+    .contact { padding-block: 69px 72px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 104px; align-items: end; }
+    .contact h2 { font-size: clamp(44px, 4.8vw, 65px); margin-bottom: 0; }
+    .contact .eyebrow { color: var(--muted); margin-bottom: 29px; }
+    .contact-copy p { max-width: 400px; margin: 0 0 25px; color: #52575a; font-size: 16px; line-height: 1.85; }
+    .contact-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 13px; }
+    .contact-email { display: inline-flex; align-items: center; min-height: 44px; font: 12px/1.7 var(--mono); text-decoration: underline; text-underline-offset: 5px; }
     .copy-email { min-height: 44px; padding: 8px 12px; border: 1px solid #b8bfba; border-radius: 0; color: #3c4540; background: transparent; cursor: pointer; font: 11px var(--mono); }
-    .copy-email:hover { background: #d8ded9; }
-    .copy-status { min-height: 18px; margin: 3px 0 0 !important; font: 11px/1.6 var(--mono) !important; }
-    .back-top { min-height: 44px; display: inline-flex; align-items: center; gap: 10px; }
-    .site-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding-block: 29px; font-size: 11px; color: var(--muted); }
-    .footer-legal { display: flex; align-items: center; gap: 18px; }
-    .footer-legal .brand-symbol { width: 19px; height: 19px; color: var(--ink); }
-    .footer-note { font: 9px/1.8 var(--mono); letter-spacing: .035em; }
-    @media (min-width: 1600px) { .hero { min-height: 810px; } }
+    .copy-email:hover { background: #e3e7e1; }
+    .copy-status { min-height: 18px; margin: 2px 0 0 !important; font: 11px/1.6 var(--mono) !important; }
+    .site-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--line); padding-block: 27px; font-size: 11px; color: var(--muted); }
+    .footer-legal { display: flex; align-items: center; gap: 16px; }
+    .footer-legal .brand-symbol { width: 19px; height: 19px; }
+    .back-top { min-height: 44px; display: inline-flex; align-items: center; gap: 10px; font: 10px/1.7 var(--mono); }
     @media (max-width: 1100px) {
       .wrap { width: calc(100% - 72px); }
-      .hero { gap: 10px; min-height: 660px; padding-block: 65px; }
-      h1 { font-size: clamp(62px, 7.5vw, 82px); }
-      .hero-description { font-size: 15px; max-width: 365px; }
-      .hero-actions { gap: 20px; }
-      .thesis, .companies-heading { grid-template-columns: 1fr 2.6fr; gap: 34px; }
-      .scale-grid { gap: 42px; }
-      .scale-paths { gap: 17px; }
-      .scale-destination, .scale-business { padding-inline: 13px; }
-      .scale-mechanisms { gap: 28px; }
-      .contact-grid { gap: 40px; }
+      .hero { gap: 42px; grid-template-columns: 1.35fr 1fr; padding-block: 68px; }
+      h1 { font-size: clamp(66px, 8.1vw, 90px); }
+      .hero-description p { font-size: 16px; }
+      .hero-description p:first-child { font-size: 20px; }
+      .company-feature { padding-inline: 36px; }
+      .company-overview { gap: 42px; }
+      .company-metric + .company-metric { padding-left: 36px; }
+      .research-grid, .ambition-grid, .contact-grid { gap: 60px; }
+      .research-record { padding-left: 28px; }
     }
     @media (max-width: 760px) {
       .wrap { width: calc(100% - 44px); }
-      .site-header { height: 85px; }
-      .backing { align-items: flex-start; flex-direction: column; gap: 0; padding-block: 10px 15px; }
+      .site-header { min-height: 85px; }
+      .brand { gap: 9px; }
       .wordmark { font-size: 26px; }
       .brand-symbol { width: 33px; height: 33px; }
-      .brand { gap: 9px; }
-      .nav { gap: 22px; font-size: 12px; }
+      .nav { gap: 21px; font-size: 12px; }
       .nav .nav-approach { display: none; }
-      .desktop-label { display: none; }
-      .mobile-label { display: inline; }
-      .nav-contact { gap: 8px; }
+      .nav-contact { gap: 7px !important; }
       .nav-contact .arrow { width: 15px; height: 15px; }
-      .hero { grid-template-columns: 1fr; gap: 32px; padding-block: 53px 42px; }
-      h1 { font-size: clamp(66px, 12.1vw, 88px); margin-top: 28px; max-width: 650px; }
-      .hero-description { max-width: 440px; font-size: 16px; }
-      .hero-actions { gap: 25px; flex-wrap: wrap; margin-top: 28px; }
-      .system { width: min(490px, 100%); justify-self: center; margin-top: -3px; }
-      .system figcaption { font-size: 10px; }
-      .thesis { grid-template-columns: 1fr; gap: 26px; padding-block: 40px 53px; }
-      .section-index { padding-top: 0; }
-      .thesis h2 { font-size: 33px; max-width: 520px; }
-      .thesis .lead { font-size: 15px; }
-      .investigation { margin-top: 30px; }
-      .investigation li { gap: 12px; padding-block: 22px; }
-      .investigation h3 { font-size: 18px; }
-      .investigation p { font-size: 14px; }
-      .discovery-map { padding: 21px; }
-      .research-core { padding: 22px; }
-      .research-core-title { font-size: 23px; }
-      .scale-section { padding-block: 49px 45px; }
-      .scale-grid { grid-template-columns: 1fr; gap: 27px; }
-      .scale-copy h2 { font-size: 45px; }
-      .scale-copy > p:not(.eyebrow) { font-size: 15px; }
-      .scale-visual { width: 100%; max-width: 530px; justify-self: center; }
-      .scale-paths { gap: 22px; }
-      .scale-mechanisms { grid-template-columns: 1fr; gap: 26px; margin-top: 33px; padding-top: 28px; }
-      .scale-mechanisms article { max-width: 580px; }
-      .scale-mechanisms h3 { margin-bottom: 9px; }
-      .scale-mechanisms p { font-size: 14px; }
-      .perspective { grid-template-columns: 1fr; gap: 24px; padding-block: 42px; }
-      .perspective .quote-context { max-width: 420px; margin-top: 0; }
-      .perspective blockquote p { font-size: 29px; margin-bottom: 0; }
-      .perspective figcaption { grid-column: 1; flex-wrap: wrap; gap: 7px; }
-      .companies { padding-block: 47px 49px; }
-      .companies-heading { grid-template-columns: 1fr; gap: 24px; margin-bottom: 28px; }
-      .companies h2 { font-size: 35px; }
-      .company-feature { padding: 25px 24px 23px; }
-      .company-feature-header { gap: 11px; flex-wrap: wrap; }
-      .company-mark { width: 40px; height: 40px; padding: 4px; }
-      .company-name { font-size: 34px; }
-      .company-status { font-size: 8px; gap: 6px; }
-      .company-summary { align-items: flex-start; flex-direction: column; gap: 15px; margin-top: 25px; }
-      .company-summary p { font-size: 23px; }
-      .company-metrics { margin-top: 26px; grid-template-columns: 1fr; }
-      .company-metric { padding-block: 26px; }
-      .company-metric + .company-metric { border-left: 0; border-top: 1px solid #cbd0cb; padding-left: 0; padding-bottom: 0; }
-      .company-metric dd { font-size: 78px; margin-bottom: 13px; }
-      .metrics-note { margin-top: 22px; }
-      .operating-intro { font-size: 19px; margin-top: 25px; }
-      .operating-grid { grid-template-columns: 1fr; gap: 25px; margin-top: 26px; }
-      .private-work { flex-direction: column; align-items: flex-start; gap: 11px; padding-top: 20px; }
-      .contact { padding-block: 46px 48px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 29px; }
-      .contact h2 { font-size: 49px; }
-      .contact .eyebrow { margin-bottom: 27px; }
-      .contact-copy p { font-size: 15px; max-width: 480px; }
-      .site-footer { padding-block: 25px; gap: 15px; }
+      .backing { flex-direction: column; align-items: flex-start; gap: 0; padding-block: 10px 15px; }
+      .hero { grid-template-columns: 1fr; gap: 37px; padding-block: 48px 48px; }
+      .hero .eyebrow { margin-bottom: 25px; }
+      h1 { font-size: clamp(63px, 12.8vw, 90px); }
+      .hero-description { max-width: 560px; }
+      .hero-description p { font-size: 16px; line-height: 1.85; margin-bottom: 20px; max-width: 100%; }
+      .hero-description p:first-child { font-size: 21px; line-height: 1.6; }
+      .hero-actions { margin-top: 26px; gap: 23px; }
+      .company-section { padding-bottom: 52px; }
+      .company-feature { padding: 23px 25px; }
+      .company-heading { padding-bottom: 20px; flex-wrap: wrap; gap: 6px 20px; }
+      .company-heading .eyebrow { font-size: 9px; }
+      .company-overview { grid-template-columns: 1fr; gap: 24px; padding-block: 26px; }
+      .product-name { gap: 13px; }
+      .product-name h2 { font-size: 49px; }
+      .product-mark { width: 34px; height: 34px; }
+      .product-description { font-size: 20px; max-width: 420px; margin-top: 18px; }
+      .company-origin { font-size: 14px; }
+      .company-metric { padding-block: 27px 25px; }
+      .company-metric + .company-metric { padding-left: 24px; }
+      .company-metric dd { font-size: clamp(52px, 10.3vw, 80px); letter-spacing: -.07em; margin-bottom: 14px; }
+      .company-metric dt { font-size: 12px; }
+      .company-metric dt small { font-size: 10px; }
+      .metrics-note { font-size: 10px; }
+      .private-work { flex-direction: column; gap: 8px; padding-top: 18px; }
+      .research { padding-block: 32px 47px; }
+      .section-top { margin-bottom: 27px; }
+      .research-grid { grid-template-columns: 1fr; gap: 36px; }
+      h2.editorial-title { font-size: 37px; max-width: 560px; margin-bottom: 25px; }
+      .prose p { font-size: 15px; line-height: 1.9; margin-bottom: 21px; }
+      .prose .lead { font-size: 19px; line-height: 1.7; }
+      .research-record { display: grid; grid-template-columns: .9fr 1fr; column-gap: 26px; padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 0; }
+      .research-number { grid-row: 1 / 4; align-self: start; font-size: clamp(76px, 14vw, 105px); margin: 0; }
+      .research-record .record-label { font-size: 17px; margin-bottom: 15px; }
+      .research-record .record-note { font-size: 11px; }
+      .research-record time { font-size: 9px; margin-top: 12px; }
+      .ambition { padding-block: 42px 46px; }
+      .ambition-grid, .contact-grid { grid-template-columns: 1fr; gap: 25px; }
+      .ambition h2 { font-size: 42px; max-width: 550px; margin-bottom: 0; }
+      .ambition .prose p { font-size: 16px; }
+      .ambition .prose .lead { font-size: 22px; }
+      .perspective { grid-template-columns: 1fr; gap: 26px; padding-block: 42px; }
+      .quote-context { max-width: 380px; margin: 0; }
+      .perspective blockquote p { font-size: 29px; }
+      .perspective figcaption { grid-column: 1; flex-wrap: wrap; gap: 10px; }
+      .contact { padding-block: 43px 40px; }
+      .contact .eyebrow { margin-bottom: 25px; }
+      .contact h2 { font-size: 46px; margin-bottom: 0; }
+      .contact-copy p { font-size: 15px; max-width: 470px; }
+      .site-footer { padding-block: 21px; gap: 10px; }
     }
     @media (max-width: 420px) {
-      .nav { gap: 18px; }
-      .nav-contact { font-size: 11px; }
-      .nav { gap: 14px; }
-      h1 { font-size: 17.1vw; }
-      .hero-description { font-size: 15px; }
-      .hero-actions { gap: 22px; }
-      .button { padding-inline: 16px; gap: 17px; font-size: 12px; }
-      .text-link { font-size: 12px; gap: 8px; }
-      .investigation li { grid-template-columns: 23px 1fr; gap: 10px; }
-      .discovery-map { padding: 17px; }
-      .research-inputs, .research-route { gap: 8px; }
-      .research-inputs span, .research-route span { font-size: 11px; }
-      .research-core { padding: 18px; }
-      .research-core-title { font-size: 21px; gap: 12px; }
-      .research-mark { width: 31px; height: 31px; }
-      .research-checks li { padding-inline: 10px; font-size: 11px; }
-      .scale-copy h2 { font-size: 40px; }
-      .scale-paths { gap: 15px; }
-      .scale-path-label { font-size: 9px; }
-      .scale-destination { font-size: 16px; padding-inline: 12px; }
-      .scale-business { font-size: 20px; padding-inline: 12px; }
-      .scale-base { padding: 18px; gap: 13px; }
-      .scale-base strong { font-size: 17px; }
-      .company-feature { padding-inline: 20px; }
-      .company-status { flex-basis: 100%; margin-left: 3px; margin-top: 7px; }
-      .company-metric dd { font-size: 72px; }
-      .contact h2 { font-size: 44px; }
-      .footer-legal { gap: 12px; }
-      .footer-note { font-size: 8px; }
+      h1 { font-size: clamp(55px, 15.6vw, 64px); }
+      .hero-actions { gap: 16px; }
+      .hero-actions .text-link { font-size: 12px; gap: 8px; }
+      .company-feature { padding-inline: 21px; }
+      .company-metrics { grid-template-columns: 1fr; }
+      .company-metric + .company-metric { border-left: 0; border-top: 1px solid #3c4140; padding-left: 0; }
+      .company-metric dd { font-size: 78px; }
+      .research-record { grid-template-columns: 1fr; gap: 0; }
+      .research-number { grid-row: auto; font-size: 93px; margin-bottom: 20px; }
+      .research-record .record-label, .research-record .record-note { max-width: 100%; }
+      h2.editorial-title { font-size: 34px; }
+      .ambition h2 { font-size: 38px; }
+      .footer-legal { gap: 10px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after { animation: none !important; transition: none !important; }
+      *, *::before, *::after { transition: none !important; }
     }
     @media print {
-      .hero { min-height: 0; padding-block: 40px; }
       .wrap { width: calc(100% - 50px); }
-      .nav, .hero-actions, .contact-copy .button { display: none; }
-      .scale-section, .contact { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-      .thesis, .scale-section, .companies, .contact { break-inside: avoid; }
+      .hero { padding-block: 35px; }
+      .nav, .hero-actions, .copy-email, .back-top { display: none; }
+      .company-feature, .ambition { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .company-feature, .research-record, .perspective { break-inside: avoid; }
     }
   </style>
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Organization","name":"Ithy","alternateName":"Ithy.ai","legalName":"Ithy, Inc.","url":"https://ithy.ai/","logo":"https://ithy.ai/icon-512.png?v=20261026","description":"Ithy uses AI to find businesses worth building, then build, grow and operate them.","email":"wluk@ithy.ai","sameAs":["https://ithy.com/"]}
+    {"@context":"https://schema.org","@type":"Organization","name":"Ithy","alternateName":"Ithy.ai","legalName":"Ithy, Inc.","url":"https://ithy.ai/","logo":"https://ithy.ai/icon-512.png?v=20261026","description":"Ithy researches, builds and owns businesses largely operated by AI.","email":"wluk@ithy.ai","sameAs":["https://ithy.com/"]}
   </script>
 </head>
 <body id="top">
@@ -339,8 +249,8 @@
       <span class="wordmark">ithy<span>.ai</span></span>
     </a>
     <nav class="nav" aria-label="Main navigation">
-      <a class="nav-approach" href="#approach">How we work</a>
-      <a class="nav-companies" href="#companies"><span class="desktop-label">Our work</span><span class="mobile-label">Work</span></a>
+      <a class="nav-approach" href="#approach">Research</a>
+      <a class="nav-companies" href="#companies">Our work</a>
       <a class="nav-contact" href="#contact"><span>Contact</span> <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
     </nav>
   </header>
@@ -355,87 +265,74 @@
 
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
+      <div>
         <p class="eyebrow">Ithy, Inc. · New York</p>
         <h1 id="hero-title"><span>We build</span><span>businesses</span><span><em>for AI to run.</em></span></h1>
-        <p class="hero-description">The hardest part is deciding what should exist. We put AI to work on that question, then on the product, the customers, and the business behind it.</p>
         <div class="hero-actions">
-          <a class="button" href="#approach">How we work <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
-          <a class="text-link" href="https://ithy.com/" target="_blank" rel="noopener noreferrer"><span>Try Ithy.com</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+          <a class="button" href="#approach">Explore the research <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+          <a class="text-link" href="#companies"><span>Our first business</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
         </div>
       </div>
-      <figure class="system" aria-label="The discovery-first approach Ithy is developing">
-        <div class="discovery-map">
-          <div class="research-inputs"><span>Customer needs</span><span>New capabilities</span><span>Changing markets</span></div>
-          <svg class="research-links" viewBox="0 0 500 42" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M80 0v16q0 6 6 6h158q6 0 6 6v14M250 0v42M420 0v16q0 6-6 6H256q-6 0-6 6v14"/></svg>
-          <div class="research-core">
-            <p class="eyebrow">The hard part</p>
-            <p class="research-core-title"><img class="research-mark" src="assets/brand.svg?v=20261024d" alt="" width="39" height="39"><span>Find a business<br>worth building.</span></p>
-            <ul class="research-checks" aria-label="What the research examines"><li>Who would pay?</li><li>Why choose it?</li><li>How do they find it?</li><li>What does it cost?</li><li>Can agents run it?</li><li>What gets stronger?</li></ul>
+      <div class="hero-description">
+        <p>Ithy builds and owns businesses that AI researches, develops and largely operates.</p>
+        <p>Most of our research is devoted to opportunity selection: whether a proposed business offers customers a compelling alternative, and whether it can acquire and serve them at sustainable margins.</p>
+        <p>People set direction, commit capital and make consequential decisions.</p>
+      </div>
+    </section>
+
+    <section class="company-section wrap" id="companies" aria-labelledby="ithy-product-name">
+      <article class="company-feature">
+        <div class="company-heading">
+          <p class="eyebrow">In operation · Our first business</p>
+          <a class="text-link" href="https://ithy.com/" target="_blank" rel="noopener noreferrer"><span>Explore Ithy.com</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+        </div>
+        <div class="company-overview">
+          <div>
+            <div class="product-name"><img class="product-mark" src="assets/ithy-product.svg?v=20261024d" alt="" width="40" height="40" loading="lazy"><h2 id="ithy-product-name">ithy<span>.com</span></h2></div>
+            <p class="product-description">Research across multiple AI models, with sources you can inspect.</p>
           </div>
-          <svg class="research-links" viewBox="0 0 500 42" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M250 0v14q0 7-7 7H87q-7 0-7 7v14M250 0v42M250 0v14q0 7 7 7h156q7 0 7 7v14"/></svg>
-          <div class="research-route"><span>Build the product</span><span>Reach customers</span><span>Run the business</span></div>
-          <p class="learning-loop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3l2 2m0-5v5h-5M20 15a8 8 0 0 1-14 3l-2-2m0 5v-5h5"/></svg><span>What happens in the business feeds the next decision.</span></p>
+          <p class="company-origin">The idea behind Ithy.com was developed largely by AI. Agents now do most of the work of building and running it, from engineering and maintenance to content, customer acquisition and routine administration.</p>
         </div>
-        <figcaption>A model for finding, building and running businesses.</figcaption>
-      </figure>
+        <dl class="company-metrics">
+          <div class="company-metric"><dt>Accounts created<small>As of Oct 27, 2026</small></dt><dd>190k+</dd></div>
+          <div class="company-metric"><dt>Sales to date<small>Jan 2025 – Oct 18, 2026</small></dt><dd>$145k+</dd></div>
+        </dl>
+        <p class="metrics-note">Accounts include free sign-ups. Sales in USD, after refunds and chargebacks.</p>
+      </article>
+      <div class="private-work"><p class="eyebrow">In development</p><p>Additional businesses are in development. We’ll share them when they’re ready.</p></div>
     </section>
 
-    <section class="thesis wrap" id="approach" aria-labelledby="approach-title">
-      <div class="section-index"><span class="number">01 /</span><span>Finding the business</span></div>
-      <div>
-        <h2 id="approach-title">Most of the work happens before anything is built.</h2>
-        <p class="lead">Our agents investigate markets, challenge ideas, and work out whether a stranger would choose what we could make. Finding a convincing answer is the hardest part.</p>
-        <ol class="investigation">
-          <li><div>
-            <h3>Look for what has become possible.</h3>
-            <p>We study both what people already buy and what better AI makes possible for the first time. New capabilities can change what is affordable, who can be served, and what people might want once they see it.</p>
-          </div></li>
-          <li><div>
-            <h3>Find a reason to choose it.</h3>
-            <p>The alternatives include established products, specialists, doing nothing, and the customer’s own AI. We investigate the complete experience: why someone would choose it, how they would find it, and what it would cost to deliver.</p>
-          </div></li>
-          <li><div>
-            <h3>Challenge the answer.</h3>
-            <p>For a promising idea, agents investigate independently and challenge the case. We compare their evidence and reasoning, including whether serving customers makes the operation stronger. A working demo answers only a small part of the question.</p>
-          </div></li>
-        </ol>
+    <section class="research wrap" id="approach" aria-labelledby="approach-title">
+      <p class="eyebrow section-top">The research</p>
+      <div class="research-grid">
+        <div>
+          <h2 class="editorial-title" id="approach-title">Commercial judgment,<br><em>supplied by software.</em></h2>
+          <div class="prose">
+            <p class="lead">Our agents develop and challenge the commercial case for each prospective business.</p>
+            <p>Each opportunity is weighed against the alternatives its customers already have: established products, specialists, existing workflows and their own AI. The case must explain how the product will earn a customer’s preference, how those customers can be reached, and whether the economics hold through delivery and ongoing operation.</p>
+            <p>Two research agents assess each opportunity independently, then reconcile their conclusions in writing. Disagreements prompt further investigation, comparison or a prototype designed to test a consequential assumption.</p>
+          </div>
+        </div>
+        <aside class="research-record" aria-label="Research activity as of October 30, 2026">
+          <p class="research-number">250+</p>
+          <p class="record-label">Business ideas assessed by two research agents.</p>
+          <p class="record-note">Independent assessments, reconciled in writing.</p>
+          <time datetime="2026-10-30">As of Oct 30, 2026</time>
+        </aside>
       </div>
     </section>
 
-    <section class="scale-section" id="scale" aria-labelledby="scale-title">
+    <section class="ambition" id="scale" aria-labelledby="scale-title">
       <div class="wrap">
-        <div class="scale-grid">
-          <div class="scale-copy">
-            <p class="eyebrow">The ambition</p>
-            <h2 id="scale-title">Company creation,<br><em>at software scale.</em></h2>
-            <p>Our bet is that starting and running a business can become a repeatable capability of software. A company could grow the products it already owns and create new ones without assembling a new organization each time.</p>
-            <p>We own the products and customer relationships. Improvements in how we build, sell and deliver create value in the businesses themselves, while the methods and software can transfer to the next market.</p>
-            <p>Better AI also changes which opportunities are worth pursuing. We’re looking for new demand and new ways to serve it, alongside businesses that become viable as the cost of skilled work falls.</p>
+        <p class="eyebrow section-top">The ambition</p>
+        <div class="ambition-grid">
+          <h2 class="editorial-title" id="scale-title">Entrepreneurship as<br><em>a repeatable capability.</em></h2>
+          <div class="prose">
+            <p class="lead">Our ambition is to expand the number and scale of businesses a single company can create and operate.</p>
+            <p>An individual product can grow into a substantial business. The research methods, engineering, customer-acquisition experience and operating software developed along the way can support subsequent businesses.</p>
+            <p>The larger possibility is entrepreneurial judgment that can serve many opportunities at once. Agents already conduct parallel investigations and much of Ithy.com’s operation. Extending that work could allow new businesses to share the same organization, without requiring a new founding team for each.</p>
+            <p>Ithy owns its businesses, so improvements in research and operations can add to their value as well as our capacity to enter further markets. Better AI also expands the opportunity set, including new products and experiences that were previously impractical.</p>
           </div>
-          <figure class="scale-visual" aria-label="Two directions of scale: grow a business and create additional businesses on shared methods">
-            <div class="scale-paths">
-              <div>
-                <p class="scale-path-label">Grow a business</p>
-                <div class="scale-destination">More people.<br>More uses.<br>More markets.</div>
-                <svg class="scale-arrow" viewBox="0 0 22 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M11 48V2M5 8l6-6 6 6"/></svg>
-                <div class="scale-business">Ithy.com<span>Live business</span></div>
-              </div>
-              <div>
-                <p class="scale-path-label">Create the next</p>
-                <div class="scale-destination future">Future businesses<small>In development</small></div>
-                <svg class="scale-arrow" viewBox="0 0 22 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M11 48V2M5 8l6-6 6 6"/></svg>
-                <div class="scale-business next">Discovery<span>The next opportunity</span></div>
-              </div>
-            </div>
-            <div class="scale-base"><img src="assets/brand.svg?v=20261024d" alt="" width="36" height="36"><div><strong>One operating company</strong><p>Shared research, engineering,<br>customer acquisition and operations.</p></div></div>
-            <figcaption>The model we’re developing. Ithy.com is live; additional businesses are in development.</figcaption>
-          </figure>
-        </div>
-        <div class="scale-mechanisms">
-          <article><h3>Grow what works.</h3><p>A useful product can reach more people, expand into new uses, and enter new markets. Agents and software should carry more of the added work.</p></article>
-          <article><h3>Reuse what transfers.</h3><p>The next business can start with established methods and working software. It still needs its own reason for customers to choose it.</p></article>
-          <article><h3>Get better at choosing.</h3><p>Real use and sales should sharpen the next decisions: what to build, how to reach buyers, and where to invest further.</p></article>
         </div>
       </div>
     </section>
@@ -446,49 +343,14 @@
       <figcaption><div>Sam Altman<span>In conversation with Alexis Ohanian</span></div><a class="source-link" href="https://www.youtube.com/watch?v=Q5vsEUgxt3E" target="_blank" rel="noopener noreferrer">Watch the interview clip <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption>
     </figure>
 
-    <section class="companies wrap" id="companies" aria-labelledby="companies-title">
-      <div class="companies-heading">
-        <div class="section-index"><span class="number">02 /</span><span>In operation</span></div>
-        <h2 id="companies-title">The first business.</h2>
-      </div>
-      <article class="company-feature" aria-labelledby="ithy-product-name">
-        <div class="company-feature-header">
-          <span class="company-mark"><img src="assets/ithy-product.svg?v=20261024d" alt="" width="58" height="58" loading="lazy"></span>
-          <a class="company-name" id="ithy-product-name" href="https://ithy.com/" target="_blank" rel="noopener noreferrer">ithy<span>.com</span></a>
-          <span class="company-status">Live product</span>
-        </div>
-        <div class="company-summary">
-          <p>One question. Independent AI perspectives.<br>Research with sources you can follow.</p>
-          <a class="text-link" href="https://ithy.com/" target="_blank" rel="noopener noreferrer"><span>Explore Ithy.com</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
-        </div>
-        <dl class="company-metrics">
-          <div class="company-metric">
-            <dt>Accounts created<small>As of Oct 27, 2026</small></dt>
-            <dd>190k+</dd>
-          </div>
-          <div class="company-metric">
-            <dt>Sales to date<small>Jan 2025 – Oct 18, 2026</small></dt>
-            <dd>$145k+</dd>
-          </div>
-        </dl>
-        <p class="metrics-note">Accounts include free sign-ups. Sales in USD, after refunds and chargebacks.</p>
-      </article>
-      <p class="operating-intro">Ithy.com began with an idea developed largely by AI. Today, agents do most of the work of building and running it.</p>
-      <div class="operating-grid" aria-label="How the work is shared at Ithy.com">
-        <div class="operating-group"><h3>Agent execution</h3><p>Research, engineering, testing and deployment.<br>Creator outreach, paid ads and search content.<br>Analytics and routine administration.</p></div>
-        <div class="operating-group"><h3>Human responsibility</h3><p>Direction and standards.<br>Budgets and capital.<br>Consequential decisions and exceptions.</p></div>
-      </div>
-      <div class="private-work"><span class="private-label">In development</span><p>We’ll share the other businesses when they’re ready.</p></div>
-    </section>
-
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-grid wrap">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Let’s talk<br><em>about Ithy.</em></h2>
+          <h2 class="editorial-title" id="contact-title">A closer look<br><em>at Ithy.</em></h2>
         </div>
         <div class="contact-copy">
-          <p>For a closer look at our work, or a conversation about where it could go, get in touch.</p>
+          <p>For a conversation about the research, the businesses or the company, get in touch.</p>
           <a class="button" href="mailto:wluk@ithy.ai?subject=About%20Ithy">Contact Ithy <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
           <div class="contact-tools">
             <a class="contact-email" href="mailto:wluk@ithy.ai">wluk@ithy.ai</a>
