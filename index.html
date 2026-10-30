@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f4f2">
   <title>Ithy.ai — We build businesses for AI to run.</title>
-  <meta name="description" content="Ithy builds and owns businesses designed for AI to handle the daily operation. Backed by LAUNCH, the venture firm founded by Jason Calacanis.">
+  <meta name="description" content="Ithy uses AI to find businesses worth building, then build, grow and operate them. Backed by Jason Calacanis’s LAUNCH.">
   <link rel="canonical" href="https://ithy.ai/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ithy.ai/">
   <meta property="og:site_name" content="Ithy.ai">
   <meta property="og:title" content="Ithy.ai — We build businesses for AI to run.">
-  <meta property="og:description" content="Building the whole operation around AI, from finding customers to delivering the product. Backed by Jason Calacanis’s LAUNCH.">
-  <meta property="og:image" content="https://ithy.ai/social-card.png?v=20261030">
+  <meta property="og:description" content="The hardest part is deciding what should exist. We put AI to work on that question, then on the product, the customers, and the business behind it.">
+  <meta property="og:image" content="https://ithy.ai/social-card.png?v=20261030b">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ithy.ai. We build businesses for AI to run. Backed by LAUNCH.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ithy.ai — We build businesses for AI to run.">
-  <meta name="twitter:description" content="Building the whole operation around AI, from finding customers to delivering the product. Backed by Jason Calacanis’s LAUNCH.">
-  <meta name="twitter:image" content="https://ithy.ai/social-card.png?v=20261030">
+  <meta name="twitter:description" content="The hardest part is deciding what should exist. We put AI to work on that question, then on the product, the customers, and the business behind it.">
+  <meta name="twitter:image" content="https://ithy.ai/social-card.png?v=20261030b">
   <meta name="twitter:image:alt" content="Ithy.ai. We build businesses for AI to run. Backed by LAUNCH.">
   <meta name="application-name" content="Ithy.ai">
   <link rel="icon" href="favicon.ico?v=20261026" sizes="16x16 32x32 48x48">
@@ -105,17 +105,33 @@
     .section-index .number { color: var(--accent); }
     .thesis h2 { font-size: clamp(30px, 3.2vw, 45px); font-weight: 450; line-height: 1.2; letter-spacing: -.04em; margin: 0 0 26px; max-width: 750px; text-wrap: balance; }
     .thesis .lead { max-width: 670px; color: var(--muted); font-size: 17px; line-height: 1.8; margin: 0; }
-    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 48px; }
-    .principle { border-top: 1px solid var(--line); padding-top: 22px; }
-    .principle-icon { width: 23px; height: 23px; margin-bottom: 24px; color: var(--accent); }
-    .principle h3 { margin: 0 0 12px; font-size: 15px; font-weight: 580; letter-spacing: -.02em; }
-    .principle p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .investigation { margin: 39px 0 0; padding: 0; list-style: none; counter-reset: investigation; }
+    .investigation li { display: grid; grid-template-columns: 30px 1fr; gap: 17px; padding: 25px 0; border-top: 1px solid var(--line); counter-increment: investigation; }
+    .investigation li::before { content: "0" counter(investigation); color: var(--muted); font: 10px/1.8 var(--mono); padding-top: 3px; }
+    .investigation h3 { margin: 0 0 10px; font-size: 19px; font-weight: 530; letter-spacing: -.025em; }
+    .investigation p { max-width: 630px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+    .research-conclusion { max-width: 640px; margin: 12px 0 0; font-size: 19px; line-height: 1.65; letter-spacing: -.02em; }
+    .ambition { padding-block: 67px 75px; border-top: 1px solid var(--line); }
+    .ambition-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 100px; align-items: start; }
+    .ambition .eyebrow { color: var(--muted); margin-bottom: 26px; }
+    .ambition h2 { max-width: 590px; margin: 0 0 26px; font-size: clamp(34px, 3.6vw, 50px); line-height: 1.15; font-weight: 450; letter-spacing: -.045em; text-wrap: balance; }
+    .ambition-copy p { max-width: 560px; margin: 0 0 18px; color: var(--muted); font-size: 16px; line-height: 1.85; }
+    .perspective { border-left: 1px solid var(--line); padding: 6px 0 0 35px; margin-top: 44px; }
+    .perspective .quote-context { color: var(--muted); font-size: 13px; line-height: 1.8; margin: 0 0 22px; }
+    .perspective blockquote { margin: 0; }
+    .perspective blockquote p { font: 29px/1.4 var(--serif); letter-spacing: -.025em; margin: 0 0 23px; }
+    .perspective figcaption { font-size: 12px; line-height: 1.8; }
+    .perspective figcaption span { display: block; color: var(--muted); }
+    .source-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; padding-block: 8px; font-size: 11px; text-decoration: underline; text-underline-offset: 4px; }
+    .source-link .arrow { width: 13px; height: 13px; }
     .model { position: relative; background: var(--ink); color: var(--paper); padding-block: 77px 64px; overflow: hidden; }
-    .model-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 92px; align-items: end; }
+    .model-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 92px; align-items: start; }
     .model .eyebrow { color: var(--highlight); margin-bottom: 33px; }
     .model h2 { font-size: clamp(38px, 4vw, 57px); font-weight: 430; line-height: 1.1; letter-spacing: -.055em; margin: 0; }
     .model h2 em { font-family: var(--serif); color: var(--highlight); font-weight: 400; }
-    .model-description { max-width: 440px; margin: 0 0 4px; color: #c3c7c5; font-size: 16px; line-height: 1.85; }
+    .model-description { max-width: 470px; padding-top: 44px; color: #c3c7c5; font-size: 16px; line-height: 1.85; }
+    .model-description p { margin: 0 0 20px; }
+    .model-description p:last-child { margin-bottom: 0; }
     .companies { padding-block: 78px 86px; }
     .companies-heading { display: grid; grid-template-columns: 1fr 2.15fr; gap: 60px; margin-bottom: 33px; }
     .companies h2 { font-size: clamp(32px, 3.5vw, 46px); font-weight: 450; line-height: 1.2; letter-spacing: -.045em; margin: 0; }
@@ -130,7 +146,12 @@
     .company-context { margin-left: auto; color: var(--muted); font-size: 13px; }
     .company-arrow { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 50%; margin-left: 16px; transition: background .2s, color .2s; }
     .company-row:hover .company-arrow { color: var(--paper); background: var(--accent); border-color: var(--accent); }
-    .private-work { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 25px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .operating-intro { max-width: 730px; margin: 30px 0 0; color: var(--muted); font-size: 16px; line-height: 1.85; }
+    .operating-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 42px; margin-top: 33px; }
+    .operating-note h3 { margin: 0 0 12px; font-size: 17px; font-weight: 530; letter-spacing: -.025em; }
+    .operating-note p { margin: 0; font-size: 14px; line-height: 1.85; color: var(--muted); }
+    .responsibility { max-width: 810px; margin: 28px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .private-work { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 25px; margin-top: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; line-height: 1.7; }
     .private-work p { margin: 0; }
     .private-label { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; font: 9px/1.6 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
     .private-label::before { content: ''; display: block; width: 5px; height: 5px; background: var(--accent); }
@@ -161,7 +182,8 @@
       .hero-description { font-size: 15px; max-width: 365px; }
       .hero-actions { gap: 20px; }
       .thesis, .companies-heading { grid-template-columns: 1fr 2.6fr; gap: 34px; }
-      .principles { gap: 20px; }
+      .ambition-grid { gap: 50px; }
+      .operating-notes { gap: 28px; }
       .model-grid { gap: 45px; }
       .contact-grid { gap: 40px; }
     }
@@ -188,15 +210,22 @@
       .section-index { padding-top: 0; }
       .thesis h2 { font-size: 33px; max-width: 520px; }
       .thesis .lead { font-size: 15px; }
-      .principles { margin-top: 32px; gap: 22px; }
-      .principle h3 { font-size: 14px; }
-      .principle p { font-size: 12px; }
-      .principle-icon { margin-bottom: 20px; }
+      .investigation { margin-top: 30px; }
+      .investigation li { gap: 12px; padding-block: 22px; }
+      .investigation h3 { font-size: 18px; }
+      .investigation p { font-size: 14px; }
+      .research-conclusion { font-size: 18px; }
+      .ambition { padding-block: 43px 47px; }
+      .ambition-grid { grid-template-columns: 1fr; gap: 18px; }
+      .ambition h2 { font-size: 36px; }
+      .ambition-copy p { font-size: 15px; }
+      .perspective { margin-top: 0; padding-left: 24px; }
+      .perspective blockquote p { font-size: 28px; }
       .model { padding-block: 49px 40px; }
       .model-grid { grid-template-columns: 1fr; gap: 29px; }
       .model .eyebrow { margin-bottom: 26px; }
       .model h2 { font-size: 43px; }
-      .model-description { font-size: 15px; max-width: 520px; }
+      .model-description { font-size: 15px; max-width: 520px; padding-top: 0; }
       .companies { padding-block: 47px 49px; }
       .companies-heading { grid-template-columns: 1fr; gap: 24px; margin-bottom: 28px; }
       .companies h2 { font-size: 35px; }
@@ -205,6 +234,10 @@
       .company-name { font-size: 32px; }
       .company-context { display: none; }
       .company-arrow { margin-left: auto; width: 39px; height: 39px; }
+      .operating-intro { font-size: 15px; margin-top: 25px; }
+      .operating-notes { grid-template-columns: 1fr; gap: 24px; margin-top: 28px; }
+      .operating-note { border-top: 1px solid var(--line); padding-top: 21px; }
+      .operating-note p { max-width: 590px; }
       .private-work { flex-direction: column; align-items: flex-start; gap: 11px; padding-top: 20px; }
       .contact { padding-block: 46px 48px; }
       .contact-grid { grid-template-columns: 1fr; gap: 29px; }
@@ -222,11 +255,8 @@
       .hero-actions { gap: 22px; }
       .button { padding-inline: 16px; gap: 17px; font-size: 12px; }
       .text-link { font-size: 12px; gap: 8px; }
-      .principles { grid-template-columns: 1fr; gap: 25px; }
-      .principle { display: grid; grid-template-columns: 24px 1fr; column-gap: 18px; padding-top: 20px; }
-      .principle-icon { grid-row: 1 / 3; margin-top: 0; }
-      .principle h3 { margin-bottom: 8px; font-size: 15px; }
-      .principle p { font-size: 13px; }
+      .investigation li { grid-template-columns: 23px 1fr; gap: 10px; }
+      .ambition h2 { font-size: 32px; }
       .model h2 { font-size: 39px; }
       .contact h2 { font-size: 44px; }
       .footer-legal { gap: 12px; }
@@ -245,7 +275,7 @@
     }
   </style>
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Organization","name":"Ithy","alternateName":"Ithy.ai","legalName":"Ithy, Inc.","url":"https://ithy.ai/","logo":"https://ithy.ai/icon-512.png?v=20261026","description":"Ithy builds and owns businesses designed for AI to handle the daily operation.","email":"wluk@ithy.ai","sameAs":["https://ithy.com/"]}
+    {"@context":"https://schema.org","@type":"Organization","name":"Ithy","alternateName":"Ithy.ai","legalName":"Ithy, Inc.","url":"https://ithy.ai/","logo":"https://ithy.ai/icon-512.png?v=20261026","description":"Ithy uses AI to find businesses worth building, then build, grow and operate them.","email":"wluk@ithy.ai","sameAs":["https://ithy.com/"]}
   </script>
 </head>
 <body id="top">
@@ -275,16 +305,16 @@
       <div class="hero-copy">
         <p class="eyebrow">Ithy, Inc. · New York</p>
         <h1 id="hero-title"><span>We build</span><span>businesses</span><span><em>for AI to run.</em></span></h1>
-        <p class="hero-description">We’re building companies where AI can develop the product, find customers, deliver what they bought, and handle the day-to-day work. People set the direction and take responsibility.</p>
+        <p class="hero-description">The hardest part is deciding what should exist. We put AI to work on that question, then on the product, the customers, and the business behind it.</p>
         <div class="hero-actions">
-          <a class="button" href="mailto:wluk@ithy.ai?subject=About%20Ithy">Email Winson <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
-          <a class="text-link" href="#approach"><span>How we work</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+          <a class="button" href="#approach">How we work <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+          <a class="text-link" href="https://ithy.com/" target="_blank" rel="noopener noreferrer"><span>Try Ithy.com</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
         </div>
       </div>
       <figure class="system">
         <svg class="system-drawing" viewBox="0 0 560 530" role="img" aria-labelledby="system-title system-description">
           <title id="system-title">Ithy’s planned business structure</title>
-          <desc id="system-description">Ithy provides shared software and operations to businesses with their own brands and customers.</desc>
+          <desc id="system-description">Ithy’s approach connects opportunity discovery, customer acquisition and shared operations across businesses with their own brands and customers.</desc>
           <defs>
             <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#d0d4d0"/></pattern>
             <path id="left-route" d="M255 281v40q0 18-18 18H109q-18 0-18 18v31"/>
@@ -294,7 +324,7 @@
           <rect x="10" y="20" width="540" height="480" fill="url(#dots)"/>
           <path class="diagram-loop" d="M91 423v43q0 15 15 15h348q15 0 15-15v-43"/>
           <path class="diagram-loop" d="M280 481v-21"/>
-          <text x="280" y="86" text-anchor="middle" class="diagram-label">ONE OPERATING COMPANY</text>
+          <text x="280" y="86" text-anchor="middle" class="diagram-label">FIND · BUILD · GROW · OPERATE</text>
           <path class="diagram-wire" d="M280 104v31"/>
           <circle cx="280" cy="104" r="2" fill="#303438"/>
           <use href="#left-route" class="diagram-wire"/>
@@ -329,32 +359,50 @@
           <text x="280" y="484" text-anchor="middle" class="diagram-small">SEPARATE BRANDS</text>
           <path d="M19 42V28h14m494 0h14v14M19 482v14h14m494 0h14v-14" fill="none" stroke="#939c95"/>
         </svg>
-        <figcaption><span>Our businesses</span><span>Built and run by Ithy</span></figcaption>
+        <figcaption><span>The Ithy approach</span><span>One company · Separate brands</span></figcaption>
       </figure>
     </section>
 
     <section class="thesis wrap" id="approach" aria-labelledby="approach-title">
-      <div class="section-index"><span class="number">01 /</span><span>How we work</span></div>
+      <div class="section-index"><span class="number">01 /</span><span>Finding the business</span></div>
       <div>
-        <h2 id="approach-title">The whole business is the project.</h2>
-        <p class="lead">A business has to win customers, deliver reliably, and earn its next sale. We study that full job before choosing what to build, including the work that usually ends up on the founder’s desk.</p>
-        <div class="principles">
-          <article class="principle">
-            <svg class="principle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="M12 0v4m0 16v4M0 12h4m16 0h4"/></svg>
-            <h3>Find something worth buying</h3>
-            <p>We look for things people want that were too expensive, too slow, or too difficult to deliver before.</p>
-          </article>
-          <article class="principle">
-            <svg class="principle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 5h18M3 12h18M3 19h18"/><rect x="6" y="2" width="4" height="6" fill="#f4f4f2"/><rect x="15" y="9" width="4" height="6" fill="#f4f4f2"/><rect x="8" y="16" width="4" height="6" fill="#f4f4f2"/></svg>
-            <h3>Make it work end to end</h3>
-            <p>Finding customers and keeping them takes as much thought as making the product. We build for the full job.</p>
-          </article>
-          <article class="principle">
-            <svg class="principle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3l2 2m0-5v5h-5M20 15a8 8 0 0 1-14 3l-2-2m0 5v-5h5"/></svg>
-            <h3>Keep the team small</h3>
-            <p>The aim is to serve more customers without needing a department for every new problem. Better software should carry more of the work.</p>
-          </article>
+        <h2 id="approach-title">First, find a business worth building.</h2>
+        <p class="lead">Most of our work happens before the first product is built. Our agents investigate markets, challenge ideas, and work out whether a stranger would choose what we could make. Finding a convincing answer is the hardest part.</p>
+        <ol class="investigation">
+          <li><div>
+            <h3>Look for what has become possible.</h3>
+            <p>We study both what people already buy and what better AI makes possible for the first time. New capabilities can change what is affordable, who can be served, and what people might want once they see it.</p>
+          </div></li>
+          <li><div>
+            <h3>Make the case from the customer’s side.</h3>
+            <p>An idea has to survive its alternatives: established products, specialists, doing nothing, and the customer’s own AI. We investigate the reason to buy, the route to a first purchase, and the work and cost behind the complete result.</p>
+          </div></li>
+          <li><div>
+            <h3>Challenge the answer.</h3>
+            <p>Agents develop and challenge competing cases, check the underlying evidence, and look for what would change the decision. We revisit the assumptions as models, markets and customer behavior change. A working demo answers only a small part of the question.</p>
+          </div></li>
+        </ol>
+        <p class="research-conclusion">Our aim is to make finding the next worthwhile business a repeatable capability of the company.</p>
+      </div>
+    </section>
+
+    <section class="ambition wrap" aria-labelledby="ambition-title">
+      <div class="ambition-grid">
+        <div class="ambition-copy">
+          <p class="eyebrow">The larger idea</p>
+          <h2 id="ambition-title">How much of a company can AI take on?</h2>
+          <p>Choosing the opportunity is the beginning. We want AI to carry it through product development, customer acquisition, delivery, support, and the decisions about what to improve next.</p>
+          <p>That changes the economics of starting a business. An opportunity can become worth pursuing when the cost of skilled work falls, or when a small team can deliver something that once required an entire organization.</p>
+          <p>We’re building toward a company that can keep discovering and operating new businesses as AI’s capabilities expand. Its success has to show up in useful products, satisfied customers, and sound economics.</p>
         </div>
+        <figure class="perspective">
+          <p class="quote-context">Asked what would feel like superintelligence, Sam Altman described AI outperforming OpenAI’s research team, then added:</p>
+          <blockquote cite="https://www.youtube.com/watch?v=hmtuvNfytjM">
+            <p>“And if that same system could do a better job running OpenAI than I could.”</p>
+          </blockquote>
+          <figcaption>Sam Altman<span>In conversation with Cleo Abram · August 2025</span></figcaption>
+          <a class="source-link" href="https://www.youtube.com/watch?v=hmtuvNfytjM" target="_blank" rel="noopener noreferrer">Watch the conversation <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+        </figure>
       </div>
     </section>
 
@@ -362,10 +410,13 @@
       <div class="wrap">
         <div class="model-grid">
           <div>
-            <p class="eyebrow">One company behind the businesses</p>
+            <p class="eyebrow">One company. Many businesses.</p>
             <h2 id="model-title">The next business<br><em>starts further ahead.</em></h2>
           </div>
-          <p class="model-description">Ithy builds and owns the businesses. Each has its own name and customers, while we reuse the code, tools, and ways of working underneath. What we learn from one should make the next easier to build and run.</p>
+          <div class="model-description">
+            <p>The businesses have their own names and customers. Underneath, Ithy shares engineering, research methods, customer-acquisition experience, and the software for daily operations.</p>
+            <p>What we learn from a campaign, a support problem, or a product release can inform the next business. The ambition is to grow the range and scale of what we operate without rebuilding the organization each time.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -373,7 +424,7 @@
     <section class="companies wrap" id="companies" aria-labelledby="companies-title">
       <div class="companies-heading">
         <div class="section-index"><span class="number">02 /</span><span>In operation</span></div>
-        <h2 id="companies-title">Our first business.</h2>
+        <h2 id="companies-title">Already in operation.</h2>
       </div>
       <a class="company-row" href="https://ithy.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore ithy.com, opens in a new tab">
         <span class="company-mark"><img src="assets/ithy-product.svg?v=20261024d" alt="" width="60" height="60" loading="lazy"></span>
@@ -381,6 +432,22 @@
         <span class="company-context">Visit ithy.com</span>
         <span class="company-arrow"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
       </a>
+      <p class="operating-intro">Ithy.com is our live AI search and research business, with paying customers. It is also where we learn what it takes for AI to do the work around a product, from reaching its audience to keeping it running.</p>
+      <div class="operating-notes">
+        <article class="operating-note">
+          <h3>Finding customers</h3>
+          <p>Our work includes AI-managed content-creator outreach, paid advertising, and search content. We carry the methods and lessons forward, while checking which channels fit each new business.</p>
+        </article>
+        <article class="operating-note">
+          <h3>Building and improving</h3>
+          <p>Agents work on research, engineering, testing, and deployment. Customer feedback and product use help determine the next changes, connecting development to the operation it serves.</p>
+        </article>
+        <article class="operating-note">
+          <h3>Running the business</h3>
+          <p>Support, account administration, analytics, and supplier costs are part of the work. Each reveals practical limits and opportunities that a prototype alone would never show.</p>
+        </article>
+      </div>
+      <p class="responsibility">People remain responsible for strategy, budgets, and consequential decisions. The goal is for agents to handle more of the research and daily execution as the operation improves.</p>
       <div class="private-work"><span class="private-label">In development</span><p>We’ll share the other businesses when they’re ready.</p></div>
     </section>
 
@@ -388,11 +455,11 @@
       <div class="contact-grid wrap">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Talk to<br><em>the founder.</em></h2>
+          <h2 id="contact-title">Let’s talk<br><em>about Ithy.</em></h2>
         </div>
         <div class="contact-copy">
-          <p>Most of our work isn’t public yet. If you’d like to know more about Ithy, write to Winson.</p>
-          <a class="button" href="mailto:wluk@ithy.ai?subject=About%20Ithy">Email Winson <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+          <p>For a closer look at our work, or a conversation about where it could go, get in touch.</p>
+          <a class="button" href="mailto:wluk@ithy.ai?subject=About%20Ithy">Contact Ithy <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
           <div class="contact-tools">
             <a class="contact-email" href="mailto:wluk@ithy.ai">wluk@ithy.ai</a>
             <button class="copy-email" type="button" id="copy-email" hidden>Copy email</button>
