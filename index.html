@@ -135,17 +135,24 @@
     .companies { padding-block: 78px 86px; }
     .companies-heading { display: grid; grid-template-columns: 1fr 2.15fr; gap: 60px; margin-bottom: 33px; }
     .companies h2 { font-size: clamp(32px, 3.5vw, 46px); font-weight: 450; line-height: 1.2; letter-spacing: -.045em; margin: 0; }
-    .company-row { display: flex; align-items: center; gap: 30px; padding: 28px 0; border-block: 1px solid var(--line); transition: border-color .2s; }
-    .company-row:hover { border-color: var(--accent); }
-    .company-mark { width: 60px; height: 60px; padding: 15px; display: grid; place-items: center; flex: 0 0 auto; background: #e7e9e6; }
-    .company-name { font-size: 37px; font-weight: 500; letter-spacing: -.065em; margin: 0; }
+    .company-feature { position: relative; padding: 40px 44px 29px; border: 1px solid #cbd0cb; background: #e9ece7; }
+    .company-feature::after { content: ''; position: absolute; top: -1px; left: -1px; width: 45px; height: 3px; background: var(--ink); }
+    .company-feature-header { display: flex; align-items: center; gap: 18px; }
+    .company-mark { width: 58px; height: 58px; padding: 8px; display: grid; place-items: center; flex: 0 0 auto; }
+    .company-name { display: inline-flex; align-items: baseline; min-height: 44px; font-size: 43px; font-weight: 500; letter-spacing: -.065em; margin: 0; }
     .company-name span { font-weight: 400; color: var(--muted); }
-    .company-identity { display: grid; gap: 7px; }
-    .company-description { max-width: 430px; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .company-mark img { display: block; width: 100%; height: auto; }
-    .company-context { margin-left: auto; color: var(--muted); font-size: 13px; }
-    .company-arrow { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 50%; margin-left: 16px; transition: background .2s, color .2s; }
-    .company-row:hover .company-arrow { color: var(--paper); background: var(--accent); border-color: var(--accent); }
+    .company-status { display: inline-flex; align-items: center; gap: 9px; margin-left: auto; color: var(--muted); font: 10px/1.6 var(--mono); letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
+    .company-status::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--ink); }
+    .company-summary { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-top: 24px; }
+    .company-summary p { margin: 0; max-width: 630px; font-size: clamp(20px, 2.2vw, 29px); line-height: 1.4; letter-spacing: -.03em; }
+    .company-summary .text-link { flex: 0 0 auto; }
+    .company-metrics { display: grid; grid-template-columns: 1fr 1fr; margin: 37px 0 0; border-top: 1px solid #cbd0cb; }
+    .company-metric { display: flex; flex-direction: column; align-items: flex-start; padding: 31px 0 0; }
+    .company-metric + .company-metric { border-left: 1px solid #cbd0cb; padding-left: 44px; }
+    .company-metric dd { order: -1; margin: 0 0 15px; font-size: clamp(66px, 8vw, 108px); line-height: 1; font-weight: 440; letter-spacing: -.075em; font-variant-numeric: lining-nums tabular-nums; }
+    .company-metric dt { font-size: 14px; letter-spacing: -.015em; line-height: 1.6; }
+    .metrics-note { max-width: 920px; margin: 25px 0 0; border-top: 1px solid #cbd0cb; padding-top: 17px; color: var(--muted); font-size: 10px; line-height: 1.8; }
     .operating-intro { max-width: 730px; margin: 30px 0 0; color: var(--muted); font-size: 16px; line-height: 1.85; }
     .operating-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 42px; margin-top: 33px; }
     .operating-note h3 { margin: 0 0 12px; font-size: 17px; font-weight: 530; letter-spacing: -.025em; }
@@ -229,11 +236,18 @@
       .companies { padding-block: 47px 49px; }
       .companies-heading { grid-template-columns: 1fr; gap: 24px; margin-bottom: 28px; }
       .companies h2 { font-size: 35px; }
-      .company-row { gap: 17px; padding-block: 23px; }
-      .company-mark { width: 50px; height: 50px; padding: 13px; }
-      .company-name { font-size: 32px; }
-      .company-context { display: none; }
-      .company-arrow { margin-left: auto; width: 39px; height: 39px; }
+      .company-feature { padding: 25px 24px 23px; }
+      .company-feature-header { gap: 11px; flex-wrap: wrap; }
+      .company-mark { width: 40px; height: 40px; padding: 4px; }
+      .company-name { font-size: 34px; }
+      .company-status { font-size: 8px; gap: 6px; }
+      .company-summary { align-items: flex-start; flex-direction: column; gap: 15px; margin-top: 25px; }
+      .company-summary p { font-size: 23px; }
+      .company-metrics { margin-top: 26px; grid-template-columns: 1fr; }
+      .company-metric { padding-block: 26px; }
+      .company-metric + .company-metric { border-left: 0; border-top: 1px solid #cbd0cb; padding-left: 0; padding-bottom: 0; }
+      .company-metric dd { font-size: 78px; margin-bottom: 13px; }
+      .metrics-note { margin-top: 22px; }
       .operating-intro { font-size: 15px; margin-top: 25px; }
       .operating-notes { grid-template-columns: 1fr; gap: 24px; margin-top: 28px; }
       .operating-note { border-top: 1px solid var(--line); padding-top: 21px; }
@@ -257,6 +271,9 @@
       .text-link { font-size: 12px; gap: 8px; }
       .investigation li { grid-template-columns: 23px 1fr; gap: 10px; }
       .ambition h2 { font-size: 32px; }
+      .company-feature { padding-inline: 20px; }
+      .company-status { flex-basis: 100%; margin-left: 3px; margin-top: 7px; }
+      .company-metric dd { font-size: 72px; }
       .model h2 { font-size: 39px; }
       .contact h2 { font-size: 44px; }
       .footer-legal { gap: 12px; }
@@ -396,12 +413,12 @@
           <p>We’re building toward a company that can keep discovering and operating new businesses as AI’s capabilities expand. Its success has to show up in useful products, satisfied customers, and sound economics.</p>
         </div>
         <figure class="perspective">
-          <p class="quote-context">Asked what would feel like superintelligence, Sam Altman described AI outperforming OpenAI’s research team, then added:</p>
-          <blockquote cite="https://www.youtube.com/watch?v=hmtuvNfytjM">
-            <p>“And if that same system could do a better job running OpenAI than I could.”</p>
+          <p class="quote-context">On the prospect of AI enabling a company with a single employee:</p>
+          <blockquote cite="https://www.youtube.com/watch?v=Q5vsEUgxt3E">
+            <p>“…a one-person billion-dollar company, which would have been unimaginable without AI and now will happen.”</p>
           </blockquote>
-          <figcaption>Sam Altman<span>In conversation with Cleo Abram · August 2025</span></figcaption>
-          <a class="source-link" href="https://www.youtube.com/watch?v=hmtuvNfytjM" target="_blank" rel="noopener noreferrer">Watch the conversation <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+          <figcaption>Sam Altman<span>In conversation with Alexis Ohanian</span></figcaption>
+          <a class="source-link" href="https://www.youtube.com/watch?v=Q5vsEUgxt3E" target="_blank" rel="noopener noreferrer">Watch the interview clip <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
         </figure>
       </div>
     </section>
@@ -426,13 +443,29 @@
         <div class="section-index"><span class="number">02 /</span><span>In operation</span></div>
         <h2 id="companies-title">Already in operation.</h2>
       </div>
-      <a class="company-row" href="https://ithy.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore ithy.com, opens in a new tab">
-        <span class="company-mark"><img src="assets/ithy-product.svg?v=20261024d" alt="" width="60" height="60" loading="lazy"></span>
-        <span class="company-identity"><span class="company-name">ithy<span>.com</span></span><span class="company-description">AI search and research, with sources you can follow.</span></span>
-        <span class="company-context">Visit ithy.com</span>
-        <span class="company-arrow"><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
-      </a>
-      <p class="operating-intro">Ithy.com is our live AI search and research business, with paying customers. It is also where we learn what it takes for AI to do the work around a product, from reaching its audience to keeping it running.</p>
+      <article class="company-feature" aria-labelledby="ithy-product-name">
+        <div class="company-feature-header">
+          <span class="company-mark"><img src="assets/ithy-product.svg?v=20261024d" alt="" width="58" height="58" loading="lazy"></span>
+          <a class="company-name" id="ithy-product-name" href="https://ithy.com/" target="_blank" rel="noopener noreferrer">ithy<span>.com</span></a>
+          <span class="company-status">Live product</span>
+        </div>
+        <div class="company-summary">
+          <p>One question. Independent AI perspectives.<br>Research with sources you can follow.</p>
+          <a class="text-link" href="https://ithy.com/" target="_blank" rel="noopener noreferrer"><span>Explore Ithy.com</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+        </div>
+        <dl class="company-metrics">
+          <div class="company-metric">
+            <dt>Registered accounts</dt>
+            <dd>190k+</dd>
+          </div>
+          <div class="company-metric">
+            <dt>Gross customer payments · USD</dt>
+            <dd>$147k+</dd>
+          </div>
+        </dl>
+        <p class="metrics-note">Product totals: registered accounts as of October 27, 2026; cumulative gross customer payments from January 2025 through October 18, 2026, before refunds and processing fees. Accounts include free registrations.</p>
+      </article>
+      <p class="operating-intro">Ithy.com is where we learn what it takes for AI to do the work around a product, from reaching its audience to keeping it running.</p>
       <div class="operating-notes">
         <article class="operating-note">
           <h3>Finding customers</h3>
